@@ -43,16 +43,12 @@ template/
 
 ## 🛠️ Getting Started
 
-1. **Install the Tool**
+1. **Clone the Repo**
    ```bash
-   git clone github.com/esrid/scattold
+   git clone github.com/esrid/Scaffolding
    ```
 
 1. **EDIT THE CODE OR BUILD IT**
-   ```bash
-   git clone github.com/esrid/scattold
-   ```
-
 
 2. **Create a New Project**
    ```bash
@@ -62,9 +58,9 @@ template/
 3. **Start Development**
    ```bash
    cd myproject
-   make esbuild    # Start TypeScript bundling
-   make tailwind   # Start Tailwind CSS processing
-   go run main.go  # Start the server
+   make esbuild (esbuild cli)   # Start TypeScript bundling
+   make tailwind  (tailwind cli) # Start Tailwind CSS processing 
+   go run . or air  # Start the server
    ```
 
 ## 🔧 Configuration
