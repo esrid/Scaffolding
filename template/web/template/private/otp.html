@@ -1,0 +1,86 @@
+{{define "content"}}
+<script
+  src="/static/js/otp.js"
+  defer
+  type="application/javascript"
+></script>
+
+<section class="min-h-[80vh] flex items-center justify-center p-4">
+  <form
+    id="form"
+    class="flex flex-col items-center justify-center p-4 gap-2"
+    action="/admin/verify"
+    method="post"
+  >
+    <div class="flex items-center justify-center p-4 gap-2" id="">
+      <input
+        type="text"
+        pattern="\d*"
+        inputmode="numeric"
+        maxlength="1"
+        required
+        name="1"
+        class="input w-[40px] focus:border-secondary digit-input"
+        value=""
+      >
+
+      <input
+        type="text"
+        pattern="\d*"
+        inputmode="numeric"
+        required
+        maxlength="1"
+        name="2"
+        class="input w-[40px] focus:border-secondary digit-input"
+        value=""
+      >
+
+      <input
+        type="text"
+        pattern="\d*"
+        inputmode="numeric"
+        required
+        maxlength="1"
+        name="3"
+        class="input w-[40px] focus:border-secondary digit-input"
+        value=""
+      >
+      <input
+        type="text"
+        pattern="\d*"
+        inputmode="numeric"
+        required
+        maxlength="1"
+        name="4"
+        class="input w-[40px] focus:border-secondary digit-input"
+        value=""
+      >
+
+      <input
+        type="text"
+        pattern="\d*"
+        required
+        inputmode="numeric"
+        maxlength="1"
+        name="5"
+        class="input w-[40px] focus:border-secondary digit-input"
+        value=""
+      >
+
+      <input
+        type="text"
+        pattern="\d*"
+        inputmode="numeric"
+        maxlength="1"
+        required
+        name="6"
+        class="input w-[40px] focus:border-secondary digit-input"
+        value=""
+      >
+    </div>
+    <input type="text" name="code" id="code" class="hidden" value="">
+    <button type="submit" class="btn btn-primary">send code</button>
+  </form>
+</section>
+
+{{end}}

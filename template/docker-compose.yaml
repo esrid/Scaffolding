@@ -1,0 +1,40 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: postgres17-a
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # networks:
+    #   - app_network
+
+#   app:
+#     build: .    # or image: your-image if pulling prebuilt
+#     container_name: go-app
+#     restart: unless-stopped
+#     environment:
+#       DB_HOST: ${DB_HOST}
+#       DB_PORT: ${DB_PORT}
+#       DB_USER: ${DB_USER}
+#       DB_PASSWORD: ${DB_PASSWORD}
+#       DB_NAME: ${DB_NAME}
+#     ports:
+#       - "80:80"
+#     depends_on:
+#       - db
+#     networks:
+#       - app_network
+#
+# networks:
+#   app_network:
+#     driver: bridge
+#
+volumes:
+  postgres_data:
+
